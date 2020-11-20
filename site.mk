@@ -18,11 +18,11 @@ GLUON_FEATURES := \
 	respondd \
 	status-page \
 	web-advanced \
-	web-wizard \
 	web-logging \
-	web-node-role \
 	web-mesh-vpn-fastd \
-	web-private-wifi
+	web-node-role \
+	web-private-wifi \
+	web-wizard
 
 ##	GLUON_SITE_PACKAGES
 #		Specify additional Gluon/OpenWrt packages to include here;
