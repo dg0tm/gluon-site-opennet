@@ -16,15 +16,15 @@ GLUON_FEATURES := \
 	mesh-vpn-fastd \
 	respondd \
 	status-page \
-	web-wizard
-
-GLUON_FEATURES_standard := \
-	mesh-wireless-sae \
 	web-advanced \
 	web-logging \
 	web-mesh-vpn-fastd \
 	web-node-role \
-	web-private-wifi
+	web-private-wifi \
+	web-wizard
+
+GLUON_FEATURES_standard := \
+	mesh-wireless-sae
 
 GLUON_FEATURES_tiny := \
 
