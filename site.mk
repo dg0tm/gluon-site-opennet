@@ -24,6 +24,14 @@ GLUON_FEATURES := \
 	web-private-wifi \
 	web-wizard
 
+##	GLUON_SITE_PACKAGES
+#		Specify additional Gluon/OpenWrt packages to include here;
+#		A minus sign may be prepended to remove a packages from the
+#		selection that would be enabled by default or due to the
+#		chosen feature flags
+
+GLUON_SITE_PACKAGES := iwinfo
+
 # Raspberry Pi A/B/B+
 ifeq ($(GLUON_TARGET),brcm2708-bcm2708)
 GLUON_SITE_PACKAGES += \
@@ -35,14 +43,6 @@ ifeq ($(GLUON_TARGET),brcm2708-bcm2709)
 GLUON_SITE_PACKAGES += \
 	kmod-ath9k-htc
 endif
-
-##	GLUON_SITE_PACKAGES
-#		Specify additional Gluon/OpenWrt packages to include here;
-#		A minus sign may be prepended to remove a packages from the
-#		selection that would be enabled by default or due to the
-#		chosen feature flags
-
-GLUON_SITE_PACKAGES := iwinfo
 
 ##	DEFAULT_GLUON_RELEASE
 #		version string to use for images
