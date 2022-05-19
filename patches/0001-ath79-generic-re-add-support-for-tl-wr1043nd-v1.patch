@@ -1,0 +1,46 @@
+From adf38cd69cc82d11a077911ea2856473309643e4 Mon Sep 17 00:00:00 2001
+From: "aiyion.prime" <git@aiyionpri.me>
+Date: Thu, 14 Apr 2022 09:40:55 +0200
+Subject: [PATCH] ath79-generic: (re)add support for tl-wr1043nd-v1
+
+Gone due to
+commit 45c84a117bf8 ("ar71xx: drop target")
+---
+ docs/user/supported_devices.rst | 2 +-
+ targets/ath79-generic           | 7 +++++++
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/docs/user/supported_devices.rst b/docs/user/supported_devices.rst
+index 8068c739..6139393e 100644
+--- a/docs/user/supported_devices.rst
++++ b/docs/user/supported_devices.rst
+@@ -95,7 +95,7 @@ ath79-generic
+   - TL-WDR4300 (v1)
+   - TL-WR810N (v1)
+   - TL-WR842N/ND (v3)
+-  - TL-WR1043N/ND (v2, v3, v4, v5)
++  - TL-WR1043N/ND (v1, v2, v3, v4, v5)
+   - WBS210 (v1.20)
+   - WBS210 (v2.0)
+ 
+diff --git a/targets/ath79-generic b/targets/ath79-generic
+index 5d53a3e7..17b62af9 100644
+--- a/targets/ath79-generic
++++ b/targets/ath79-generic
+@@ -386,6 +386,13 @@ device('tp-link-tl-wr842n-v3', 'tplink_tl-wr842n-v3', {
+ 	},
+ })
+ 
++device('tp-link-tl-wr1043nd-v1', 'tplink_tl-wr1043nd-v1', {
++	class = 'tiny', -- 32M ath9k
++	manifest_aliases = {
++		'tp-link-tl-wr1043n-nd-v1', -- upgrade from OpenWrt 19.07
++	},
++	packages = { 'zram-swap' },
++})
+ device('tp-link-tl-wr1043nd-v2', 'tplink_tl-wr1043nd-v2', {
+ 	manifest_aliases = {
+ 		'tp-link-tl-wr1043n-nd-v2', -- upgrade from OpenWrt 19.07
+-- 
+2.30.2
+
