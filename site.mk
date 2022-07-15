@@ -38,7 +38,12 @@ GLUON_SITE_PACKAGES_standard := \
 
 # Raspberry Pi 2
 ifeq ($(GLUON_TARGET),bcm27xx-bcm2709)
-GLUON_SITE_PACKAGES += kmod-ath9k-htc
+	TARGET_ROOTFS_PARTSIZE = 500
+
+	GLUON_SITE_PACKAGES += kmod-ath9k-htc \
+			       block-mount \
+			       python3 \
+			       python3-pip
 endif
 
 ##	DEFAULT_GLUON_RELEASE
