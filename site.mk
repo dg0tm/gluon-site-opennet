@@ -15,12 +15,12 @@ GLUON_FEATURES := \
 	mesh-batman-adv-15 \
 	mesh-vpn-fastd \
 	respondd \
-	mesh-wireless-sae \
 	status-page \
 	web-advanced \
 	web-wizard
 
 GLUON_FEATURES_standard := \
+	mesh-wireless-sae \
 	web-private-wifi \
 	wireless-encryption-wpa3
 
@@ -32,9 +32,9 @@ GLUON_FEATURES_standard := \
 
 GLUON_SITE_PACKAGES := iwinfo
 
-GLUON_SITE_PACKAGES_standard := \
-	ca-bundle \
-	libustream-wolfssl
+#GLUON_SITE_PACKAGES_standard := \
+#	ca-bundle \
+#	libustream-wolfssl
 
 # Raspberry Pi 2
 ifeq ($(GLUON_TARGET),bcm27xx-bcm2709)
