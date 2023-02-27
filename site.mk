@@ -34,8 +34,7 @@ GLUON_SITE_PACKAGES := iwinfo
 
 GLUON_SITE_PACKAGES_standard := \
 	ca-bundle \
-	libustream-wolfssl \
-	tcpdump
+	libustream-wolfssl
 
 # Raspberry Pi 2
 ifeq ($(GLUON_TARGET),bcm27xx-bcm2709)
