@@ -6,7 +6,6 @@ features {
 	'alfred',
 	'authorized-keys',
 	'autoupdater',
-	'ebtables-filter-multicast',
 	'ebtables-filter-ra-dhcp',
 	'ebtables-limit-arp',
 	'mesh-batman-adv-15',
