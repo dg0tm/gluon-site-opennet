@@ -1,4 +1,4 @@
-##	gluon site.mk makefile
+##	gluon site.mk makefile example
 
 ##	DEFAULT_GLUON_RELEASE
 #		version string to use for images
