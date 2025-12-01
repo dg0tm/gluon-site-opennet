@@ -11,6 +11,9 @@ features {
 	'mesh-vpn-fastd',
 	'web-advanced',
 	'web-wizard',
+
+	'respondd',
+	'neighbour-info',
 }
 
 if not device_class('tiny') then
