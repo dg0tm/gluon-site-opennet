@@ -4,16 +4,19 @@ packages {
 }
 
 features {
-	'autoupdater',
+	'alfred',
 	'authorized-keys',
+	'autoupdater',
+	'ebtables-filter-multicast',
+	'ebtables-filter-ra-dhcp',
+	'ebtables-limit-arp',
 	'logging',
-	'mesh-olsrd',
+	'mesh-batman-adv-15',
 	'mesh-vpn-fastd',
+	'respondd',
+	'status-page',
 	'web-advanced',
 	'web-wizard',
-
-	'respondd',
-	'neighbour-info',
 }
 
 if not device_class('tiny') then
