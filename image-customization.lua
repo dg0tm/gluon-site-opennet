@@ -1,13 +1,13 @@
-packages {'iwinfo'}
+packages {
+	'iwinfo',
+}
 
 features {
-	'alfred',
 	'authorized-keys',
 	'autoupdater',
 	'ebtables-filter-multicast',
 	'ebtables-filter-ra-dhcp',
 	'ebtables-limit-arp',
-	'logging',
 	'mesh-batman-adv-15',
 	'mesh-vpn-fastd',
 	'respondd',
@@ -17,12 +17,17 @@ features {
 }
 
 if not device_class('tiny') then
+	features {
+		'alfred',
+		'logging',
+		'tls',
+	}
+
 	packages {
 		'tcpdump',
 	}
+end
 
-	features {
-		'tls',
-		'wireless-encryption-wpa3',
-	}
+if device {'tplink_archer-c6-v2'} then
+	disable()
 end
