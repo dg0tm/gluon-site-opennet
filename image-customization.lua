@@ -28,6 +28,12 @@ if not device_class('tiny') then
 	}
 end
 
+if target('x86', 'generic') then
+	packages {
+		'open-vm-tools',
+	}
+end
+
 if device {'tplink_archer-c6-v2'} then
 	disable()
 end
