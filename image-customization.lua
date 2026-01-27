@@ -18,6 +18,7 @@ features {
 
 if not device_class('tiny') then
 	features {
+		'wireless-encryption-wpa3',
 		'alfred',
 		'logging',
 		'tls',
