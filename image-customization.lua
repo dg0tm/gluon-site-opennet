@@ -22,6 +22,7 @@ if not device_class('tiny') then
 		'alfred',
 		'logging',
 		'tls',
+		'web-mesh-vpn-fastd',
 	}
 
 	packages {
